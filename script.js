@@ -14,6 +14,10 @@ app.controller('MainController', function ($scope, $http) {
     //     $scope.items = chunk(response.data.ItemSearchResponse.Items[0].Item, 3);
     //     console.log($scope.items);
     // })
+    $http.get('https://api.github.com/repos/rivermerrill/merrills/events').then(function(res, err){
+        console.log(res.data[0].payload.commits[0].message);
+        $scope.mostRecent = res.data[0].payload.commits[0].message;
+    })
 })
 
 function chunk(arr, size) {

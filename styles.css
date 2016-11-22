@@ -5,24 +5,49 @@
 .float-left{
     float: left;
 }
-
+#status{
+    position: absolute;
+    z-index: 100;
+}
 body{
    font-family: 'Montserrat', sans-serif;
 }
+ #owl-example .owl-item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 .logo{
     color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
     font-family: serif;
     text-align: center;
     letter-spacing: 4;
     font-weight: 100;
 }
 .navbar{
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.navbar h1{
+    text-align: center;
+    font-family: serif;
+    text-align: center;
+    letter-spacing: 4;
+    color: white;
+    font-weight: 100;
 }
 .navbar ul li{
     list-style-type: none;
     display: inline-block;
-    margin-left: 20.7%;
+    margin-left: 2%;
+    margin-right: 5%;
     font-size: 14pt;
 }
 .header{

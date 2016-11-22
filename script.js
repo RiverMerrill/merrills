@@ -19,6 +19,11 @@ app.controller('MainController', function ($scope, $http) {
         $scope.mostRecent = res.data[0].payload.commits[0].message;
     })
 })
+$(document).ready(function() {
+ 
+  $("#owl-example").owlCarousel({items: 1});
+ 
+});
 
 function chunk(arr, size) {
     var newArr = [];

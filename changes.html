@@ -1,0 +1,32 @@
+<html ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Changes</title>
+</head>
+
+<body ng-controller="Changes">
+    <h3>Most recent to least recent.</h3>
+    <ul>
+        <li ng-repeat="item in changes">{{item}}</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script>
+        var app = angular.module('app', []);
+
+        app.controller('Changes', function($http, $scope){
+            $http.get('https://api.github.com/repos/rivermerrill/merrills/events').then(function(res){
+                console.log(res);
+                $scope.changes = [];
+                res.data.forEach(function(item){
+                    if(item.payload.commits){
+                        $scope.changes.push(item.payload.commits[0].message)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -12,6 +12,9 @@
 body{
    font-family: 'Montserrat', sans-serif;
 }
+#owl-example{
+    background-color: lightgrey;
+}
  #owl-example .owl-item img{
     display: block;
     width: 100%;
@@ -29,11 +32,25 @@ body{
     font-weight: 100;
 }
 .navbar{
+    opacity: 0.97;
+    background-color: lightgrey;
     z-index: 100;
     position: absolute;
     width: 100%;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.navbar a{
+    font-family:'Montserrat', sans-serif;
+    color: white;
+}
+.navbar a:active{
+    color:white;
+}
+.navbar a:hover{
+    color: #f6f6f6;
 }
 .logo h1{
     text-align: center;

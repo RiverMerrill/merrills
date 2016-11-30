@@ -2,14 +2,14 @@ var app = angular.module('app', []);
 
 app.controller('MainController', function ($scope, $http) {
     $http.get('https://api.github.com/repos/rivermerrill/merrills/events').then(function (res, err) {
-        console.log(res.data[0].payload.commits[0].message);
         $scope.mostRecent = res.data[0].payload.commits[0].message;
     })
 })
-$(document).ready(function () {
-
-    $("#owl-example").owlCarousel({ items: 1 });
-
+jQuery(function ($) {
+    $(document).ready(function () {
+        $("#owl-example").owlCarousel({ items: 1 });
+        $('.navbar').stickUp();
+    });
 });
 
 function chunk(arr, size) {
@@ -19,11 +19,6 @@ function chunk(arr, size) {
     }
     return newArr;
 }
-
-$(document).ready(function () {
-    //enabling stickUp on the '.navbar-wrapper' class
-    $('.navbar').stickUp();
-});
 
 
 var controller = new ScrollMagic.Controller();

@@ -1,10 +1,4 @@
 /*constants*/
-.float-right{
-    float: right;
-}
-.float-left{
-    float: left;
-}
 #status{
     position: absolute;
     z-index: 100;
@@ -106,20 +100,20 @@ body{
     padding: 14pt;
     transition: all 0.3s ease 0s;
 }
-.btn-yellow{
+.btn-greater{
     background-color: #f4e77d;
     color: white;
 }
-.btn-yellow:hover{
+.btn-greater:hover{
     background-color: white;
     color: black;
     border: 1px solid #f4e77d;
 }
-.btn-blue{
+.btn-lesser{
     background-color: #3099f4;
     color: white;
 }
-.btn-blue:hover{
+.btn-lesser:hover{
     background-color: white;
     color: black;
     border: 1px solid #3099f4;
@@ -158,18 +152,32 @@ body{
     text-align: center;
 }
 .products{
+    background-image:url("http://www.dands.biz/images/PRODUCT_IMAGE/MERRILL_SK.jpg");
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: 14pt;
     height: 80%;
-}
-.products p{
-    margin-top: 6%;
-    font-size: 17pt;
-    margin-left: 30%;
-    width: 50%;
-}
-.products div{
+    width: 60%;
     margin-top: 5%;
-    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+}
+.productInfo{
+   text-align: center;
+   width: 20%;
+   opacity: 0;
+}
+.leftAnim{
+  margin-right: 35;
+}
+.rightAnim{
+  margin-left: 35;
+}
+.productInfo h3{
+    font-size: 24pt;
 }
 .footer{
     text-align: center;

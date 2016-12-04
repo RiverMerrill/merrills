@@ -15,6 +15,13 @@ body{
 #owl-example{
     background-color: lightgrey;
 }
+.item h2{
+    color: white;
+    position: absolute;
+    top:200;
+    width: 100%;
+    text-align: center;
+}
  #owl-example .owl-item img{
     display: block;
     width: 100%;
@@ -117,16 +124,15 @@ body{
     color: black;
     border: 1px solid #3099f4;
 }
-.discount{
+.subliminal{
     margin-top: 50px !important;
     opacity: 0;
     padding-top: 7%;
     padding-bottom: 7%;
     color: #333333;
-    font-size: 25pt;
     font-weight: lighter;
     display: block;
-    line-height: 1em;
+    vertical-align: middle;
     margin: 10px 0;
     text-align: center;
     letter-spacing: .05em;

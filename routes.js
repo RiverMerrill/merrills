@@ -1,24 +1,27 @@
 angular.module('app', ['ui.router'])
-  .config(function($stateProvider){
-    $stateProvider
-    .state('index',{
-      url: '/',
-      templateUrl: '/templates/index.html'
-    })
-    .state('store', {
-      url: '/store',
-      templateUrl: '/templates/store.html'
-    })
-    .state('product', {
-      url: '/product/:productId',
-      templateUrl: '/templates/product.html',
-      controller: 'ProductController'
-    })
-    .state('changes', {
-      url: '/changes',
-      templateUrl: '/templates/changes.html',
-      controller: 'ChangesController'
-    })
+.run(['$state', function ($state) {
+  $state.transitionTo('index');
+}])
+.config(function($stateProvider){
+  $stateProvider
+  .state('index',{
+    url: '/',
+    templateUrl: '/templates/index.html'
+  })
+  .state('store', {
+    url: '/store',
+    templateUrl: '/templates/store.html'
+  })
+  .state('product', {
+    url: '/product/:productId',
+    templateUrl: '/templates/product.html',
+    controller: 'ProductController'
+  })
+  .state('changes', {
+    url: '/changes',
+    templateUrl: '/templates/changes.html',
+    controller: 'ChangesController'
+  })
   // $routeProvider.when('/',{
   //   templateUrl: 'templates/index.html',
   //   controller: 'MainController'

@@ -1,5 +1,5 @@
 
 <h3>Most recent to least recent.</h3>
 <ul>
-  <li ng-repeat="item in changes">{{item.payload.commits[0].message}}</li>
+  <li ng-repeat="item in changes">{{item.payload.commits[0].message}}, {{item.created_at | date}}</li>
 </ul>

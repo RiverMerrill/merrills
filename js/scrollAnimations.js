@@ -12,24 +12,33 @@ function chunk(arr, size) {
   }
   return newArr;
 }
+$(window).on('scroll', function() {
+    var y_scroll_pos = window.pageYOffset;
+    var scroll_pos_test = 150;             // set to whatever you want it to be
+
+    if(y_scroll_pos > scroll_pos_test) {
+        $('#subliminal').fadeIn('slow');
+    }
+});
+
 
 
 var controller = new ScrollMagic.Controller();
 
 // build scene
-var scene1 = new ScrollMagic.Scene({ triggerElement: "#subliminal" })
+var scene1 = new ScrollMagic.Scene({ triggerElement: "#subliminal", offset: '-100' })
 // trigger a velocity opaticy animation
-.setVelocity("#subliminal", { translateY: -25, opacity: 100 }, { duration: 600 })
+.setVelocity("#subliminal", { translateY: -25, opacity: 1 }, { duration: 600 })
 .addTo(controller);
 
-var scene2 = new ScrollMagic.Scene({triggerElement: ".leftanim"})
-.setVelocity(".leftAnim", {translateX: +35, opacity: 100}, {duration: 1000})
-.addTo(controller);
-
-var scene3 = new ScrollMagic.Scene({triggerElement: ".rightAnim"})
-.setVelocity(".rightAnim", {translateX: -35, opacity: 100}, {duration: 1000})
+var scene2 = new ScrollMagic.Scene({triggerElement: ".products"})
+.setVelocity(".leftAnim", {translateX: +35, opacity: 1}, {duration: 700})
 .addTo(controller);
 
 var scene3 = new ScrollMagic.Scene({triggerElement: ".products"})
-.setVelocity(".products", {opacity: 100}, {duration: 1000})
+.setVelocity(".rightAnim", {translateX: -35, opacity: 1}, {duration: 1000})
+.addTo(controller);
+
+var scene4 = new ScrollMagic.Scene({triggerElement: ".products"})
+.setVelocity(".products", {opacity: 1}, {duration: 2000})
 .addTo(controller);

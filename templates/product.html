@@ -1,6 +1,12 @@
 <div class="container">
   <img class="product-image" ng-src="{{product.image}}">
-  <h2 class="product-title">{{product.title}}</h2>
+  <span class="line"></span>
+  <h2 class="line-text">{{product.title}}</h2>
   <p class="product-description">{{product.description}}</p>
-  <button type="button" class="btn btn-lesser add-to-cart">Add to Cart</button>
+  <br>
+  <!-- <button ng-click="addToCart({productId: product.productId})" type="button" class="btn btn-lesser add-to-cart"><span ng-show="add">Add to cart</span> <img ng-show="loading" src="assets/loader.gif" /> <i ng-show="added" class="fa fa-check"></i></button>
+  <br>
+  <label for="quantity">Quantity:</label>
+  <input name="quantity" class="cart-quantity" max="999" type="number" ng-model="quantity"/> -->
+  <div ng-include="product.button"></div>
 </div>

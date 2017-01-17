@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ngStorage'])
 .run(['$state', function ($state) {
   $state.transitionTo('index');
 }])
@@ -10,7 +10,8 @@ angular.module('app', ['ui.router'])
   })
   .state('store', {
     url: '/store',
-    templateUrl: '/templates/store.html'
+    templateUrl: '/templates/store.html',
+    controller: 'StoreController'
   })
   .state('product', {
     url: '/product/:productId',
@@ -22,14 +23,4 @@ angular.module('app', ['ui.router'])
     templateUrl: '/templates/changes.html',
     controller: 'ChangesController'
   })
-  // $routeProvider.when('/',{
-  //   templateUrl: 'templates/index.html',
-  //   controller: 'MainController'
-  // })
-  // .when('/store',{
-  //   templateUrl: 'templates/store.html',
-  // })
-  // .otherwise({
-  //   templateUrl: 'templates/index.html'
-  // })
 })
